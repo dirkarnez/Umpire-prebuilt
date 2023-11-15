@@ -114,6 +114,7 @@ jobs:
             -DUMPIRE_ENABLE_HIP=OFF ^
             -DUMPIRE_ENABLE_MPI=OFF ^
             -DUMPIRE_ENABLE_TESTS=OFF ^
+            -DCAMP_ENABLE_TESTS=OFF ^
             -DCMAKE_INSTALL_PREFIX="cmake-build/${{ env.cmakeInstallationPath }}" -B./cmake-build &&^
             cd cmake-build && ( cmake --build . --config Release && cmake --install .  || type .\CMakeFiles\CMakeError.log )  
  
